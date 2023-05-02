@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MedicMadSkill</string>
+
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="next">Далее</string>
+    <string name="voidite">Войдите, чтобы пользоваться функциями приложения</string>
+    <string name="vhodpoemail">Вход по E-mail</string>
+</resources>
