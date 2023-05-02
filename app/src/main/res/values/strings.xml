@@ -5,4 +5,6 @@
     <string name="next">Далее</string>
     <string name="voidite">Войдите, чтобы пользоваться функциями приложения</string>
     <string name="vhodpoemail">Вход по E-mail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
