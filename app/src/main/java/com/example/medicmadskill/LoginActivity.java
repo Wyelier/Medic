@@ -1,5 +1,6 @@
 package com.example.medicmadskill;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,7 +9,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SecondActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,11 @@ public class SecondActivity extends AppCompatActivity {
                 else {
                     btnNext.setEnabled(true);
                     btnNext.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                    btnNext.setOnClickListener(v -> {
+                        Intent email = new Intent(LoginActivity.this, EmailActivity.class);
+                        startActivity(email);
+                        finish();
+                    });
                 }
             }
 
