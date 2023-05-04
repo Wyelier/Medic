@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.medicmadskill'
-    compileSdk 29
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.medicmadskill"
