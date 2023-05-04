@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "907592090122",
+    "project_id": "medicbag-e40ef",
+    "storage_bucket": "medicbag-e40ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907592090122:android:4832a24024a43ab0d2d5f3",
+        "android_client_info": {
+          "package_name": "com.example.medicmadskill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907592090122-mqj7km43isvbjeonjgmk7eoc2038mmf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATAT56QhiNzzk6FoPOkv5YjxQhwDuh_j0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907592090122-mqj7km43isvbjeonjgmk7eoc2038mmf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

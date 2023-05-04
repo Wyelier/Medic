@@ -1,8 +1,10 @@
 package com.example.medicmadskill;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +15,19 @@ public class EmailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.email_activity);
 
+
         EditText[] codeDigits = {
                 findViewById(R.id.editCode1),
                 findViewById(R.id.editCode2),
                 findViewById(R.id.editCode3),
                 findViewById(R.id.editCode4)
         };
+
+        String combo = "";
+        for (EditText digit : codeDigits) {
+            combo += digit.getText().toString().trim();
+        }
+        Log.d("MyActivity", combo);
 
         for(int i = 0; i < codeDigits.length; i++) {
             final int currInd = i;
@@ -50,6 +59,11 @@ public class EmailActivity extends AppCompatActivity {
                     }
                 }
             });
+        }
+        if (combo.equals("1111")) {
+            Intent intent = new Intent(this, PatientActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 }
