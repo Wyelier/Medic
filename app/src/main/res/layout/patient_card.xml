@@ -139,10 +139,24 @@
         android:layout_marginTop="24dp"
         android:autofillHints="Пол"
         android:background="@drawable/rounded_edit_text"
+        android:padding="14dp"
         android:spinnerMode="dropdown"
+        android:tooltipText="Пол"
         app:layout_constraintEnd_toEndOf="@+id/EditGender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditBirth" />
+
+    <TextView
+        android:id="@+id/textSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:text="Пропустить"
+        android:textColor="@color/blue_skip"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

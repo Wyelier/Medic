@@ -19,66 +19,70 @@
 
     <TextView
         android:id="@+id/textNextCode"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:gravity="center"
         android:text="Отправить код повторно можно \n будет через 60 секунд"
+        android:textColor="@color/gray_text"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/textCodeEmail" />
 
-    <EditText
-        android:id="@+id/editCode1"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@drawable/bg_code"
-        android:ems="2"
-        android:gravity="center"
-        android:inputType="number"
-        android:maxLength="1"
-        app:layout_constraintStart_toStartOf="@+id/textNextCode"
-        app:layout_constraintTop_toBottomOf="@+id/textCodeEmail" />
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCodeEmail">
 
-    <EditText
-        android:id="@+id/editCode2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/bg_code"
-        android:ems="2"
-        android:gravity="center"
-        android:inputType="number"
-        android:maxLength="1"
-        app:layout_constraintStart_toEndOf="@+id/editCode1"
-        app:layout_constraintTop_toTopOf="@+id/editCode1" />
+        <EditText
+            android:id="@+id/editCode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <EditText
-        android:id="@+id/editCode3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/bg_code"
-        android:ems="2"
-        android:gravity="center"
-        android:inputType="number"
-        android:maxLength="1"
-        app:layout_constraintStart_toEndOf="@+id/editCode2"
-        app:layout_constraintTop_toTopOf="@+id/editCode4" />
+            android:background="@drawable/bg_code"
+            android:ems="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
 
-    <EditText
-        android:id="@+id/editCode4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/bg_code"
-        android:ems="2"
-        android:gravity="center"
-        android:inputType="number"
-        android:maxLength="1"
-        app:layout_constraintStart_toEndOf="@+id/editCode3"
-        app:layout_constraintTop_toTopOf="@+id/editCode1" />
+        <EditText
+            android:id="@+id/editCode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_code"
+            android:ems="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/editCode3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_code"
+            android:ems="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+
+        <EditText
+            android:id="@+id/editCode4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_code"
+            android:ems="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
