@@ -10,13 +10,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicMadSkill"
-        tools:targetApi="31">
+        tools:targetApi="30">
         <activity
-            android:name=".Api.nav_view"
-            android:exported="false"
-            android:label="@string/title_activity_nav_view" />
-        <activity
-            android:name=".PassActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".OnBoardActivity"
             android:exported="false"></activity>
         <activity
             android:name=".LoginActivity"
@@ -34,7 +30,7 @@
             android:name=".EmailActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".PassActivity"
             android:exported="false"></activity>
         <activity
             android:name=".PatientActivity"

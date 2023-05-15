@@ -22,7 +22,6 @@ public class PatientActivity extends AppCompatActivity {
         options.add("Пол");
         options.add("Мужской");
         options.add("Женский");
-        options.add("");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
