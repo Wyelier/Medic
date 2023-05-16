@@ -73,7 +73,7 @@ public class OnBoardActivity extends AppCompatActivity {
 
     public void nextBtn(int position) {
         if(position == 2) {
-            Intent auth = new Intent(this, LoginActivity.class);
+            Intent auth = new Intent(this, AuthActivity.class);
             startActivity(auth);
             finish();
         }

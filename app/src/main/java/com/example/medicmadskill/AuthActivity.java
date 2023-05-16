@@ -9,11 +9,11 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class AuthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
+        setContentView(R.layout.activity_auth);
         Button btnNext = findViewById(R.id.btnLog);
         EditText editEmail = findViewById(R.id.EditName);
 
@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                     btnNext.setEnabled(true);
                     btnNext.setBackgroundColor(getResources().getColor(R.color.purple_500));
                     btnNext.setOnClickListener(v -> {
-                        Intent email = new Intent(LoginActivity.this, EmailActivity.class);
+                        Intent email = new Intent(AuthActivity.this, CodeActivity.class);
                         startActivity(email);
                         finish();
                     });

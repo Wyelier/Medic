@@ -6,11 +6,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PassActivity extends AppCompatActivity {
+public class PasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pass_activity);
+        setContentView(R.layout.activity_password);
 
         TextView textView = findViewById(R.id.textSkip);
 

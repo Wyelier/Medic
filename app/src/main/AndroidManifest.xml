@@ -13,6 +13,26 @@
         tools:targetApi="30">
         <activity
             android:name=".SplashActivity"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".OnBoardActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".AuthActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".CodeActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".PasswordActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".PatientActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,21 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".OnBoardActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".EmailActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".PassActivity"
-            android:exported="false"></activity>
-        <activity
-            android:name=".PatientActivity"
-            android:exported="false"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
