@@ -18,7 +18,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.medicmadskill.Api.MedicAPI;
 import com.example.medicmadskill.Models.User;
 
 import retrofit2.Call;
@@ -46,7 +45,7 @@ public class CodeActivity extends AppCompatActivity {
         numcode4 = findViewById(R.id.editCode4);
 
         timeCode = findViewById(R.id.textNextCode);
-        // back = findViewById(R.id
+        back = findViewById(R.id.emailBack);
 
         numcode1.addTextChangedListener(watcher);
         numcode2.addTextChangedListener(watcher);
@@ -54,8 +53,11 @@ public class CodeActivity extends AppCompatActivity {
         numcode4.addTextChangedListener(watcher);
         showKeyboard(numcode1);
 
-        // обратный отсчет
         startCountDownTime();
+
+        back.setOnClickListener(v -> {
+            goEmail();
+        });
     }
 
     private void goEmail() {
@@ -136,12 +138,12 @@ public class CodeActivity extends AppCompatActivity {
 
     private boolean checkCode() {
 
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(CodeActivity.this);
         String email = sharedPref.getString("email", "");
         String userCode = numcode1.getText().toString() + numcode2.getText().toString() + numcode3.getText().toString() + numcode4.getText().toString();
 
         MedicAPI api = MedicAPI.retrofit.create(MedicAPI.class);
-        Call<User> call = api.signIn(email, Integer.parseInt(userCode));
+        Call<User> call = api.signin(email, userCode);
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {

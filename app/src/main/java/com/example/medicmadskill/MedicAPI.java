@@ -1,4 +1,4 @@
-package com.example.medicmadskill.Api;
+package com.example.medicmadskill;
 
 import com.example.medicmadskill.Models.User;
 
@@ -14,7 +14,7 @@ public interface MedicAPI {
     Call<Void> sendCode(@Header("email") String email);
 
     @POST("api/signin")
-    Call<User> signIn(@Header("email") String email, @Header("code") Integer code);
+    Call<User> signin(@Header("email") String email, @Header("code") String code);
 
     Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://medic.madskill.ru/api/")
