@@ -13,11 +13,16 @@
         tools:targetApi="30">
         <activity
             android:name=".SplashActivity"
-            android:exported="false">
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity
-            android:name=".OnBoardActivity"
+            android:name=".OnBoard.OnBoardActivity"
             android:exported="false"/>
         <activity
             android:name=".AuthActivity"
@@ -32,14 +37,8 @@
             android:name=".PatientActivity"
             android:exported="false"/>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:name=".MainScreen.MainActivity"
+            android:exported="false" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
 

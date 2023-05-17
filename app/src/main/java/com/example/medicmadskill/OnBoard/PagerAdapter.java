@@ -1,4 +1,4 @@
-package com.example.medicmadskill;
+package com.example.medicmadskill.OnBoard;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

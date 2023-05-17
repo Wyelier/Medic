@@ -1,4 +1,4 @@
-package com.example.medicmadskill;
+package com.example.medicmadskill.OnBoard;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,6 +7,13 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.medicmadskill.AuthActivity;
+import com.example.medicmadskill.OnBoard.FragmentOne;
+import com.example.medicmadskill.OnBoard.FragmentThree;
+import com.example.medicmadskill.OnBoard.FragmentTwo;
+import com.example.medicmadskill.OnBoard.PagerAdapter;
+import com.example.medicmadskill.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +26,7 @@ public class OnBoardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_onboard);
         onBoardListElement = findViewById(R.id.viewPager);
         next = findViewById(R.id.textMiddle);
         ScrollingPagerIndicator indicator = findViewById(R.id.indicator);

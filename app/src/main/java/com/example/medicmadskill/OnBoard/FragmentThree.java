@@ -1,4 +1,4 @@
-package com.example.medicmadskill;
+package com.example.medicmadskill.OnBoard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,19 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentTwo  extends Fragment {
+import com.example.medicmadskill.R;
+
+public class FragmentThree extends Fragment {
 
     private ImageView mImageView;
     private int mImageId;
 
-
-    public FragmentTwo() {
-
+    public FragmentThree() {
     }
 
-    // TODO: Rename and change types and number of parameters
-    public static FragmentTwo newInstance(int imageId) {
-        FragmentTwo fragment = new FragmentTwo();
+    public static FragmentThree newInstance(int imageId) {
+        FragmentThree fragment = new FragmentThree();
         Bundle args = new Bundle();
         args.putInt("image_id", imageId);
         fragment.setArguments(args);
@@ -39,8 +38,8 @@ public class FragmentTwo  extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_two, container, false);
-        mImageView = view.findViewById(R.id.imageFrag2);
+        View view = inflater.inflate(R.layout.fragment_three, container, false);
+        mImageView = view.findViewById(R.id.imageFrag3);
         mImageView.setImageResource(mImageId);
         return view;
     }

@@ -74,44 +74,35 @@
         <Button
             android:id="@+id/btnLog"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
             android:backgroundTint="@color/btn_disabled"
             android:letterSpacing="0"
             android:text="@string/next"
-            android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            app:cornerRadius="10dp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="Или войдите с помощью"
             android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnYandex"
-            app:layout_constraintEnd_toEndOf="@+id/btnLog"
-            app:layout_constraintStart_toStartOf="@+id/btnLog" />
+            android:layout_marginTop="100dp"/>
 
         <Button
             android:id="@+id/btnYandex"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/gray_border"
             android:letterSpacing="0"
             android:padding="16dp"
             android:text="Войти с Яндекс"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="18sp"
-            app:cornerRadius="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnLog"
-            app:layout_constraintStart_toStartOf="@+id/btnLog" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.example.medicmadskill;
+package com.example.medicmadskill.OnBoard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.medicmadskill.R;
 
 public class FragmentOne extends Fragment {
 
