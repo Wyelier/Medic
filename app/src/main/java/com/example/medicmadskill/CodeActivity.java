@@ -51,8 +51,8 @@ public class CodeActivity extends AppCompatActivity {
         numcode2.addTextChangedListener(watcher);
         numcode3.addTextChangedListener(watcher);
         numcode4.addTextChangedListener(watcher);
-        showKeyboard(numcode1);
 
+        showKeyboard(numcode1);
         startCountDownTime();
 
         back.setOnClickListener(v -> {

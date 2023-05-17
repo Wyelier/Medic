@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(SplashActivity.this);
                 if (sharedPref.contains("token") && sharedPref.contains("pin")) {
-                    Intent main = new Intent(SplashActivity.this, PasswordActivity.class);
+                    Intent main = new Intent(SplashActivity.this, PasswordAppActivity.class);
                     startActivity(main);
                     finish();
                 } else {

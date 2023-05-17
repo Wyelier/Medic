@@ -13,7 +13,7 @@ public interface MedicAPI {
     @POST("sendCode")
     Call<Void> sendCode(@Header("email") String email);
 
-    @POST("api/signin")
+    @POST("signin")
     Call<User> signin(@Header("email") String email, @Header("code") String code);
 
     Retrofit retrofit = new Retrofit.Builder()

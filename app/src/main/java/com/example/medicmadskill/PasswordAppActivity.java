@@ -9,14 +9,13 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.medicmadskill.MainScreen.MainActivity;
 
-public class PasswordActivity extends AppCompatActivity {
+public class PasswordAppActivity extends AppCompatActivity {
 
     private Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnDel;
     private EditText passwordApp;
@@ -24,15 +23,8 @@ public class PasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_password);
+        setContentView(R.layout.activity_password_app);
         setSetting();
-            TextView textView = findViewById(R.id.textSkip);
-
-            textView.setOnClickListener(v -> {
-                Intent intent = new Intent(this, PatientActivity.class);
-                startActivity(intent);
-                finish();
-            });
 
         btn0.setOnClickListener(v -> onClick(btn0));
         btn1.setOnClickListener(v -> onClick(btn1));
@@ -62,14 +54,17 @@ public class PasswordActivity extends AppCompatActivity {
                 String text = charSequence.toString();
                 if (text.length() == 4) {
                     Log.d("Errorrrr", ""+text);
-                    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(PasswordActivity.this);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString("pin", text);
-                    editor.apply();
-                    Toast.makeText(PasswordActivity.this, "Пароль создан", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                    SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(PasswordAppActivity.this);
+                    String pincode = sharedPref.getString("pin", "");
+                    if(pincode.equals(text)) {
+                        Intent intent = new Intent(PasswordAppActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+                        return;
+                    } else {
+                        Toast.makeText(PasswordAppActivity.this, "Неправльный пароль", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
 
@@ -99,5 +94,6 @@ public class PasswordActivity extends AppCompatActivity {
 
         btnDel = (Button) findViewById(R.id.btnDelete);
         passwordApp =  (EditText) findViewById(R.id.passwordApp);
+
     }
 }
