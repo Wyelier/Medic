@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.medicmadskill.MainScreen.MainActivity;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,6 +28,7 @@ public class AuthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_auth);
         Button btnNext = findViewById(R.id.btnLog);
         EditText editEmail = findViewById(R.id.EditName);
+        btnNext.setEnabled(false);
 
         editEmail.addTextChangedListener(new TextWatcher() {
             @Override
@@ -54,6 +57,9 @@ public class AuthActivity extends AppCompatActivity {
         });
 
         btnNext.setOnClickListener(v -> {
+            Intent intent = new Intent(AuthActivity.this, PasswordActivity.class);
+            startActivity(intent);
+            finish();
             MedicAPI api = MedicAPI.retrofit.create(MedicAPI.class);
             Call<Void> call = api.sendCode(editEmail.getText().toString());
 
@@ -68,13 +74,12 @@ public class AuthActivity extends AppCompatActivity {
                         Intent code = new Intent(AuthActivity.this, CodeActivity.class);
                         startActivity(code);
                     } else {
-                        Toast.makeText(AuthActivity.this, "" + response.body(), Toast.LENGTH_SHORT).show();
+
                     }
                 }
 
                 @Override
                 public void onFailure(@NonNull Call<Void> call, Throwable t) {
-                    Toast.makeText(AuthActivity.this, "Ошибка" + t.getMessage(), Toast.LENGTH_SHORT).show();
 
                 }
             });
